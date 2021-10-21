@@ -21,7 +21,7 @@ RUN apt update && \
   /LunarVim/utils/installer/install.sh --local --no-install-dependencies
 
 # Setup LVIM to run on starup
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-l", "-c"]
 CMD ["lvim"]
 
 # vim: ft=dockerfile:
